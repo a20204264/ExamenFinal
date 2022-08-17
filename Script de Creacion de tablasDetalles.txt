@@ -1,0 +1,19 @@
+
+Script de Tabla "pizzas_clientes":
+
+create table pizzas_clientes(
+id_cliente int NOT NULL,
+id_pizza int NOT NULL,
+FOREIGN KEY(id_pizza ) REFERENCES pizzas (id_pizza )  on delete cascade on update cascade,
+FOREIGN KEY(id_cliente ) REFERENCES clientes( id_cliente )  on delete cascade on update cascade
+)
+
+
+Script de Tabla "pizzeria_pizza":
+
+create table pizzeria_pizza(
+ 	id_pizerria int NOT NULL,
+ 	id_pizza int NOT NULL,
+  	FOREIGN KEY(id_pizerria ) REFERENCES pizzerias (id_pizerria )  on delete cascade on update cascade,
+ 	FOREIGN KEY(id_pizza ) REFERENCES pizzas( id_pizza )  on delete cascade on update cascade
+ )
